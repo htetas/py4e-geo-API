@@ -1,3 +1,4 @@
+#program to extract geo locations using JSON from py4e
 import urllib.request, urllib.parse, urllib.error
 import json
 import ssl
@@ -35,3 +36,5 @@ while True:
     print('lat', lat, 'lng', lng)
     location = js['results'][0]['formatted_address']
     print(location)
+    placeID = js['results'][0]['place_id']
+    print(placeID)
